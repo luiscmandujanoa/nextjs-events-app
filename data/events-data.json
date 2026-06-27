@@ -1,0 +1,249 @@
+{
+  "cities": [
+    {
+      "id": "london",
+      "name": "London",
+      "title": "Events in London",
+      "description": "From world-class concerts at the O2 to cutting-edge tech conferences in the City, London's event scene is as diverse as the city itself. Find what's on near you.",
+      "image": "https://images.unsplash.com/photo-1533929736458-ca588d08c8be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+    },
+    {
+      "id": "san-francisco",
+      "name": "San Francisco",
+      "title": "Events in San Francisco",
+      "description": "The Bay Area is the heartbeat of innovation. Whether you're into blockchain, startups, or performing arts, San Francisco has an event waiting for you.",
+      "image": "https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+    },
+    {
+      "id": "barcelona",
+      "name": "Barcelona",
+      "title": "Events in Barcelona",
+      "description": "Sun, culture, and non-stop energy. Barcelona brings together the best of Mediterranean creativity with international conferences, live music, and unforgettable parties.",
+      "image": "https://images.unsplash.com/photo-1579282240050-352db0a14c21?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=652&q=80"
+    }
+  ],
+  "events": [
+    {
+      "id": "london-comic-con-winter",
+      "title": "London Comic Con Winter",
+      "city": "london",
+      "cityName": "London",
+      "date": "2024-12-07",
+      "location": "ExCeL London, Royal Victoria Dock",
+      "price": 35,
+      "capacity": 8000,
+      "description": "The UK's biggest pop culture convention returns for its winter edition. Meet your favourite comic book artists, cosplay creators, and celebrity guests. Explore thousands of collectibles, exclusive merch, and live panels across two action-packed days.",
+      "image": "https://images.unsplash.com/photo-1608889476561-6242cfdbf622?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+      "emails_registered": [
+        "testing@claude.com",
+        "prueba@claude.com"
+      ]
+    },
+    {
+      "id": "hyde-park-winter-wonderland",
+      "title": "Hyde Park Winter Wonderland",
+      "city": "london",
+      "cityName": "London",
+      "date": "2024-11-22",
+      "location": "Hyde Park, London W2 2UH",
+      "price": 0,
+      "capacity": 100000,
+      "description": "Europe's favourite Christmas destination is back. Skate on the iconic open-air ice rink, explore the enchanting Christmas market, and enjoy rides, shows, and festive food in the heart of London. Free entry — pay only for what you enjoy.",
+      "image": "https://images.unsplash.com/photo-1520891102758-5d6525023b0e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "emails_registered": []
+    },
+    {
+      "id": "new-years-eve-in-london-2023",
+      "title": "New Year's Eve in London 2024",
+      "city": "london",
+      "cityName": "London",
+      "date": "2024-12-31",
+      "location": "South Bank, London SE1",
+      "price": 15,
+      "capacity": 12000,
+      "description": "Ring in the New Year with one of the world's most iconic fireworks displays over the River Thames. Join thousands of revellers along the South Bank for a night of music, light installations, and a midnight spectacular you'll never forget.",
+      "image": "https://images.unsplash.com/photo-1521478413868-1bbd982fa4a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "emails_registered": []
+    },
+    {
+      "id": "edtech-world-summit-2024",
+      "title": "EdTech World Summit 2024",
+      "city": "london",
+      "cityName": "London",
+      "date": "2024-11-14",
+      "location": "Queen Elizabeth II Centre, Westminster",
+      "price": 299,
+      "capacity": 2000,
+      "description": "The premier gathering for educators, technologists, and policymakers shaping the future of learning. Hear from over 80 speakers across keynotes and workshops covering AI in education, personalised learning, and the future of higher ed.",
+      "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "emails_registered": [
+        "alicia@gmail.com",
+        "monica@gmail.com"
+      ]
+    },
+    {
+      "id": "sigala-at-electric-brixton",
+      "title": "Sigala at Electric Brixton",
+      "city": "london",
+      "cityName": "London",
+      "date": "2024-12-20",
+      "location": "Electric Brixton, Town Hall Parade, Brixton",
+      "price": 28,
+      "capacity": 1500,
+      "description": "Award-winning DJ and producer Sigala brings his euphoric dance anthems to one of South London's most beloved venues. Expect a night of non-stop energy, chart-topping remixes, and a crowd that lives for the music.",
+      "image": "https://images.unsplash.com/photo-1478147427282-58a87a120781?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "emails_registered": [
+        "monica@gmail.com"
+      ]
+    },
+    {
+      "id": "kiss-haunted-house-party-2024",
+      "title": "KISS Haunted House Party 2024",
+      "city": "london",
+      "cityName": "London",
+      "date": "2024-10-26",
+      "location": "OVO Arena Wembley, London HA9 0DH",
+      "price": 45,
+      "capacity": 12500,
+      "description": "The UK's biggest Halloween party returns to Wembley Arena. KISS FM's legendary Haunted House Party features the hottest DJs, incredible stage production, elaborate costumes, and surprises around every corner. One night only — don't miss it.",
+      "image": "https://wembleypark.com/media/images/KISS-HHP-42-1440x810-Logos-Date-de.2e16d0ba.fill-496x279.jpg",
+      "emails_registered": []
+    },
+    {
+      "id": "sf-blockchain-week",
+      "title": "SF Blockchain Week",
+      "city": "san-francisco",
+      "cityName": "San Francisco",
+      "date": "2024-10-28",
+      "location": "Moscone Center, 747 Howard St, San Francisco",
+      "price": 199,
+      "capacity": 5000,
+      "description": "The West Coast's leading blockchain and Web3 conference brings together founders, developers, and investors building the decentralised future. Four days of panels, hackathons, workshops, and networking with the brightest minds in crypto.",
+      "image": "https://images.unsplash.com/photo-1516245834210-c4c142787335?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
+      "emails_registered": [
+        "laura@gmail.com"
+      ]
+    },
+    {
+      "id": "innovation-summit-san-francisco",
+      "title": "Innovation Summit San Francisco",
+      "city": "san-francisco",
+      "cityName": "San Francisco",
+      "date": "2024-11-08",
+      "location": "Fort Mason Center, 2 Marina Blvd, San Francisco",
+      "price": 149,
+      "capacity": 3000,
+      "description": "Where Silicon Valley's most ambitious ideas come to life. This one-day summit unites startup founders, venture capitalists, and enterprise leaders to explore the trends reshaping technology, business, and society in 2025 and beyond.",
+      "image": "https://images.unsplash.com/photo-1521464302861-ce943915d1c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+      "emails_registered": []
+    },
+    {
+      "id": "fan-expo-san-francisco",
+      "title": "FAN EXPO San Francisco",
+      "city": "san-francisco",
+      "cityName": "San Francisco",
+      "date": "2024-11-30",
+      "location": "Moscone Center West, San Francisco",
+      "price": 40,
+      "capacity": 25000,
+      "description": "Comics, sci-fi, horror, anime, and gaming collide at Northern California's biggest fan convention. Get autographs from your favourite actors, join cosplay competitions, discover independent creators, and geek out with tens of thousands of fellow fans.",
+      "image": "https://images.unsplash.com/photo-1608889825103-eb5ed706fc64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+      "emails_registered": []
+    },
+    {
+      "id": "san-francisco-opera-gala",
+      "title": "San Francisco Opera — Opening Gala",
+      "city": "san-francisco",
+      "cityName": "San Francisco",
+      "date": "2024-09-06",
+      "location": "War Memorial Opera House, 301 Van Ness Ave",
+      "price": 85,
+      "capacity": 3000,
+      "description": "Celebrate the opening of a new opera season with a night of world-class performance at one of America's most prestigious opera houses. This year's gala programme features acclaimed international soloists, a full orchestra, and a post-show reception.",
+      "image": "https://images.unsplash.com/photo-1580809361436-42a7ec204889?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+      "emails_registered": []
+    },
+    {
+      "id": "concert-christian-loffler",
+      "title": "Concert: Christian Löffler + Detect Ensemble",
+      "city": "barcelona",
+      "cityName": "Barcelona",
+      "date": "2024-11-16",
+      "location": "Palau de la Música Catalana, Barcelona",
+      "price": 32,
+      "capacity": 2200,
+      "description": "German electronic composer Christian Löffler brings his hauntingly beautiful live show to one of Barcelona's most stunning venues. Joined by the Detect Ensemble, he weaves organic instruments with electronic soundscapes in a performance that's truly one of a kind.",
+      "image": "https://images.unsplash.com/photo-1478147427282-58a87a120781?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "emails_registered": [
+        "alicia@gmail.com",
+        "monica@gmail.com"
+      ]
+    },
+    {
+      "id": "the-halloween-house-party",
+      "title": "The Halloween House Party",
+      "city": "barcelona",
+      "cityName": "Barcelona",
+      "date": "2024-10-31",
+      "location": "Razzmatazz Club, Carrer dels Almogàvers 122",
+      "price": 20,
+      "capacity": 4000,
+      "description": "Barcelona's most notorious Halloween party takes over all five rooms of Razzmatazz for one terrifying night. Five DJs, elaborate horror décor, costume contests with cash prizes, and a crowd that goes all out. Come in costume — the scarier the better.",
+      "image": "https://images.unsplash.com/photo-1587407627257-27b7127c868c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "emails_registered": [
+        "alicia@gmail.com",
+        "monica@gmail.com",
+        "david@yahoo.com",
+        "claire@ss.com"
+      ]
+    },
+    {
+      "id": "international-conference-on-industrial-design",
+      "title": "International Conference on Industrial Design",
+      "city": "barcelona",
+      "cityName": "Barcelona",
+      "date": "2024-11-21",
+      "location": "Fira Barcelona Gran Via, Hall 8",
+      "price": 180,
+      "capacity": 1500,
+      "description": "A gathering of the world's leading industrial designers, researchers, and brands exploring the intersection of form, function, and sustainability. Two days of talks, workshops, and a curated exhibition showcasing the best product design from around the globe.",
+      "image": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "emails_registered": [
+        "alicia@gmail.com",
+        "monica@gmail.com"
+      ]
+    },
+    {
+      "id": "world-congress-2024-barcelona",
+      "title": "World Congress 2024 — Barcelona",
+      "city": "barcelona",
+      "cityName": "Barcelona",
+      "date": "2024-12-03",
+      "location": "CCIB — Centre de Convencions Internacional de Barcelona",
+      "price": 350,
+      "capacity": 6000,
+      "description": "One of the largest international congresses to land in Barcelona this year, bringing together researchers, policymakers, and industry leaders from over 60 countries. Three days of keynotes, parallel sessions, and an exhibition floor packed with the latest innovations.",
+      "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "emails_registered": [
+        "alicia@gmail.com",
+        "monica@gmail.com"
+      ]
+    },
+    {
+      "id": "riskminds-international",
+      "title": "RiskMinds International",
+      "city": "barcelona",
+      "cityName": "Barcelona",
+      "date": "2024-12-09",
+      "location": "Hotel Arts Barcelona, Carrer de la Marina 19",
+      "price": 2500,
+      "capacity": 800,
+      "description": "The world's leading risk management conference for senior finance and banking professionals. Attend closed-door sessions, roundtables, and workshops covering credit risk, market volatility, regulatory change, and the impact of AI on financial risk modelling.",
+      "image": "https://images.unsplash.com/photo-1591115765373-5207764f72e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "emails_registered": [
+        "alicia@gmail.com",
+        "monica@gmail.com"
+      ]
+    }
+  ]
+}

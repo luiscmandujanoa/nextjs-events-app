@@ -1,42 +1,55 @@
 import Image from "next/image";
 import Link from "next/link";
 import Hero from "@/components/Hero";
-import data from "@/data/data.json";
+import data from "@/data/events-data.json";
 
 export default function Home() {
-  const cities = data.cities;
+    const cities = data.cities;
 
-  return (
-    <div className="space-y-6 mt-5">
-      <Hero />
-      <div className="max-w-7xl mx-auto">
-        {cities.map((city, index) => {
-          const isEven = index % 2 === 0;
-          const direction = isEven ? "md:flex-row" : "md:flex-row-reverse";
+    return (
+        <>
+            <Hero />
+            <section className="mx-auto max-w-7xl px-6 py-16">
+                <h2 className="font-display text-foreground mb-12 text-3xl font-bold">
+                    Ciudades destacadas
+                </h2>
+                <div className="divide-border flex flex-col divide-y">
+                    {cities.map((city, index) => {
+                        const isEven = index % 2 === 0;
 
-          return (
-            <Link
-              key={city.id}
-              href={`/events/${city.id}`}
-              className={`flex gap-8 py-10 items-center hover:scale-[1.01] transition ${direction}`}
-            >
-              <div className="w-40 sm:w-48 md:w-96 lg:w-[600px] h-48 sm:h-64 md:h-80 lg:h-96 relative shrink-0">
-                <Image
-                  src={city.image}
-                  alt={city.title}
-                  fill
-                  className="object-cover rounded-md"
-                />
-              </div>
+                        return (
+                            <Link
+                                key={city.id}
+                                href={`/events/${city.id}`}
+                                className={`group flex flex-col items-center gap-8 py-12 md:flex-row ${
+                                    !isEven ? "md:flex-row-reverse" : ""
+                                }`}
+                            >
+                                <div className="relative h-64 w-full shrink-0 overflow-hidden rounded-xl md:h-80 md:w-[480px]">
+                                    <Image
+                                        src={city.image}
+                                        alt={city.title}
+                                        fill
+                                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                    />
+                                </div>
 
-              <div className="flex flex-col">
-                <h2 className="text-xl font-semibold">{city.title}</h2>
-                <p className="text-gray-500">{city.description}</p>
-              </div>
-            </Link>
-          );
-        })}
-      </div>
-    </div>
-  );
+                                <div className="flex flex-1 flex-col gap-3">
+                                    <h3 className="font-display text-foreground group-hover:text-primary text-2xl font-bold transition-colors">
+                                        {city.title}
+                                    </h3>
+                                    <p className="text-muted leading-relaxed">
+                                        {city.description}
+                                    </p>
+                                    <span className="text-primary mt-2 text-sm font-medium">
+                                        Ver eventos →
+                                    </span>
+                                </div>
+                            </Link>
+                        );
+                    })}
+                </div>
+            </section>
+        </>
+    );
 }

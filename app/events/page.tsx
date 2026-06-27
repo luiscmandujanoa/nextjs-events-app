@@ -1,46 +1,58 @@
 import Image from "next/image";
-import data from "@/data/data.json";
+import data from "@/data/events-data.json";
 import Link from "next/link";
 
 export default function EventsPage() {
   const events = data.events;
 
   return (
-    <div className="space-y-8 max-w-7xl mx-auto mt-5">
-      <h1 className="text-3xl font-bold">Mira todos los eventos</h1>
-      <p className="text-gray-500">
-        Busca todos los eventos disponibles por ciudad y categoría
-      </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
-        {events.map((currentEvent) => {
-          return (
-            <Link
-              key={currentEvent.id}
-              href={`/events/${currentEvent.city}/${currentEvent.id}`}
-            >
-              <div
-                key={currentEvent.id}
-                className="w-full h-80 lg:h-96 relative rounded-lg overflow-hidden cursor-pointer group"
-              >
-                <Image
-                  src={currentEvent.image}
-                  alt={currentEvent.title}
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 group-hover:opacity-100 transition" />
-
-                <div className="absolute bottom-0 p-4 text-white">
-                  <h2 className="text-lg font-semibold leading-snug">
-                    {currentEvent.title}
-                  </h2>
-                </div>
-              </div>
-            </Link>
-          );
-        })}
+    <section className="max-w-7xl mx-auto px-6 py-16">
+      <div className="mb-10">
+        <h1 className="font-display text-4xl font-bold text-foreground">
+          Todos los eventos
+        </h1>
+        <p className="text-muted mt-2">
+          Explora eventos disponibles en todas las ciudades
+        </p>
       </div>
-    </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {events.map((event) => (
+          <Link
+            key={event.id}
+            href={`/events/${event.city}/${event.id}`}
+            className="group rounded-xl overflow-hidden border border-border bg-surface hover:border-primary transition-colors"
+          >
+            <div className="w-full h-56 relative overflow-hidden">
+              <Image
+                src={event.image}
+                alt={event.title}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+
+            <div className="p-4 flex flex-col gap-2">
+              <h2 className="font-display font-semibold text-foreground leading-snug group-hover:text-primary transition-colors">
+                {event.title}
+              </h2>
+              <div className="flex items-center justify-between text-sm text-muted">
+                <span className="capitalize">{event.cityName}</span>
+                <span className="font-mono">
+                  {event.price === 0 ? "Free" : `$${event.price}`}
+                </span>
+              </div>
+              <p className="text-sm text-muted font-mono">
+                {new Date(event.date).toLocaleDateString("en-GB", {
+                  day: "numeric",
+                  month: "short",
+                  year: "numeric",
+                })}
+              </p>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </section>
   );
 }
