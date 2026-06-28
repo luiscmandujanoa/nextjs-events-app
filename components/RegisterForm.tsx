@@ -19,7 +19,7 @@ export default function RegisterForm({ eventId, city, spotsLeft }: Props) {
     );
 
     if (spotsLeft <= 0) {
-        return <p className="text-muted text-sm">Este evento está agotado.</p>;
+        return <p className="text-muted text-sm">This event is sold out.</p>;
     }
 
     return (
@@ -37,7 +37,7 @@ export default function RegisterForm({ eventId, city, spotsLeft }: Props) {
                     disabled={isPending}
                     className="bg-primary hover:bg-primary-hover rounded-lg px-6 py-2.5 text-sm font-medium text-white transition-colors disabled:cursor-not-allowed disabled:opacity-50"
                 >
-                    {isPending ? "Registrando..." : "Register"}
+                    {isPending ? "Registering..." : "Register"}
                 </button>
             </div>
 

@@ -13,12 +13,12 @@ export async function registerEmail(
     const email = formData.get("email")?.toString().trim();
 
     if (!email) {
-        return { success: false, message: "El email es requerido." };
+        return { success: false, message: "Email is required." };
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-        return { success: false, message: "El email no es válido." };
+        return { success: false, message: "The email is not valid." };
     }
 
     const filePath = path.join(process.cwd(), "data", "events-data.json");
@@ -30,17 +30,17 @@ export async function registerEmail(
     );
 
     if (eventIndex === -1) {
-        return { success: false, message: "Evento no encontrado." };
+        return { success: false, message: "Event not found." };
     }
 
     const event = data.events[eventIndex];
 
     if (event.emails_registered.includes(email)) {
-        return { success: false, message: "Este email ya está registrado." };
+        return { success: false, message: "This email is already registered." };
     }
 
     if (event.emails_registered.length >= event.capacity) {
-        return { success: false, message: "Este evento está agotado." };
+        return { success: false, message: "This event is sold out." };
     }
 
     data.events[eventIndex].emails_registered.push(email);
@@ -49,5 +49,5 @@ export async function registerEmail(
 
     revalidatePath(`/events/${city}/${eventId}`);
 
-    return { success: true, message: "¡Registro exitoso!" };
+    return { success: true, message: "You're registered!" };
 }

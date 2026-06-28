@@ -4,6 +4,7 @@ import type { EventData } from "@/types/event";
 import data from "@/data/events-data.json";
 import Link from "next/link";
 import RegisterForm from "@/components/RegisterForm";
+import FadeIn from "@/components/FadeIn";
 
 export default async function EventPage({
     params,
@@ -53,87 +54,98 @@ export default async function EventPage({
                 <span className="text-foreground">{event.title}</span>
             </nav>
 
-            <h1 className="font-display text-foreground mb-8 text-4xl leading-tight font-bold md:text-5xl">
-                {event.title}
-            </h1>
+            <FadeIn>
+                <h1 className="font-display text-foreground mb-8 text-4xl leading-tight font-bold md:text-5xl">
+                    {event.title}
+                </h1>
+            </FadeIn>
 
-            <div className="relative mb-10 h-72 w-full overflow-hidden rounded-xl md:h-[480px]">
-                <Image
-                    src={event.image}
-                    alt={event.title}
-                    fill
-                    priority
-                    className="object-cover"
-                />
-            </div>
-
-            <div className="mb-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
-                <div className="bg-surface border-border rounded-xl border p-4">
-                    <p className="text-muted mb-1 text-xs">Date</p>
-                    <p className="text-foreground text-sm font-medium">
-                        {formattedDate}
-                    </p>
-                </div>
-                <div className="bg-surface border-border rounded-xl border p-4">
-                    <p className="text-muted mb-1 text-xs">Location</p>
-                    <p className="text-foreground text-sm font-medium">
-                        {event.location}
-                    </p>
-                </div>
-                <div className="bg-surface border-border rounded-xl border p-4">
-                    <p className="text-muted mb-1 text-xs">Price</p>
-                    <p className="text-foreground font-mono text-sm font-medium">
-                        {event.price === 0 ? "Free" : `$${event.price}`}
-                    </p>
-                </div>
-                <div className="bg-surface border-border rounded-xl border p-4">
-                    <p className="text-muted mb-1 text-xs">Registered</p>
-                    <p className="text-foreground font-mono text-sm font-medium">
-                        {registeredCount} / {event.capacity}
-                    </p>
-                </div>
-            </div>
-
-            <p className="text-muted mb-12 leading-relaxed">
-                {event.description}
-            </p>
-
-            <section
-                aria-labelledby="register-heading"
-                className="border-border bg-surface flex flex-col gap-4 rounded-xl border p-6"
-            >
-                <div>
-                    <h2
-                        id="register-heading"
-                        className="font-display text-foreground text-xl font-bold"
-                    >
-                        Register for this event
-                    </h2>
-                    <p className="text-muted mt-1 text-sm">
-                        {spotsLeft > 0
-                            ? `${spotsLeft} spots left out of ${event.capacity}`
-                            : "This event is sold out"}
-                    </p>
-                </div>
-
-                {spotsLeft > 0 ? (
-                    <RegisterForm
-                        eventId={event.id}
-                        city={city}
-                        spotsLeft={spotsLeft}
+            <FadeIn delay={0.1}>
+                <div className="relative mb-10 h-72 w-full overflow-hidden rounded-xl md:h-[480px]">
+                    <Image
+                        src={event.image}
+                        alt={event.title}
+                        fill
+                        priority
+                        sizes="(max-width: 768px) 100vw, 896px"
+                        className="object-cover"
                     />
-                ) : (
-                    <p className="text-muted text-sm">
-                        Check other{" "}
-                        <Link
-                            href={`/events/${city}`}
-                            className="text-primary hover:underline"
+                </div>
+            </FadeIn>
+
+            <FadeIn delay={0.2}>
+                <div className="mb-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
+                    <div className="bg-surface border-border rounded-xl border p-4">
+                        <p className="text-muted mb-1 text-xs">Date</p>
+                        <p className="text-foreground text-sm font-medium">
+                            {formattedDate}
+                        </p>
+                    </div>
+                    <div className="bg-surface border-border rounded-xl border p-4">
+                        <p className="text-muted mb-1 text-xs">Location</p>
+                        <p className="text-foreground text-sm font-medium">
+                            {event.location}
+                        </p>
+                    </div>
+                    <div className="bg-surface border-border rounded-xl border p-4">
+                        <p className="text-muted mb-1 text-xs">Price</p>
+                        <p className="text-foreground font-mono text-sm font-medium">
+                            {event.price === 0 ? "Free" : `$${event.price}`}
+                        </p>
+                    </div>
+                    <div className="bg-surface border-border rounded-xl border p-4">
+                        <p className="text-muted mb-1 text-xs">Registered</p>
+                        <p className="text-foreground font-mono text-sm font-medium">
+                            {registeredCount} / {event.capacity}
+                        </p>
+                    </div>
+                </div>
+            </FadeIn>
+
+            <FadeIn delay={0.3}>
+                <p className="text-muted mb-12 leading-relaxed">
+                    {event.description}
+                </p>
+            </FadeIn>
+
+            <FadeIn delay={0.4}>
+                <section
+                    aria-labelledby="register-heading"
+                    className="border-border bg-surface flex flex-col gap-4 rounded-xl border p-6"
+                >
+                    <div>
+                        <h2
+                            id="register-heading"
+                            className="font-display text-foreground text-xl font-bold"
                         >
-                            events in {cityName}
-                        </Link>
-                    </p>
-                )}
-            </section>
+                            Register for this event
+                        </h2>
+                        <p className="text-muted mt-1 text-sm">
+                            {spotsLeft > 0
+                                ? `${spotsLeft} spots left out of ${event.capacity}`
+                                : "This event is sold out"}
+                        </p>
+                    </div>
+
+                    {spotsLeft > 0 ? (
+                        <RegisterForm
+                            eventId={event.id}
+                            city={city}
+                            spotsLeft={spotsLeft}
+                        />
+                    ) : (
+                        <p className="text-muted text-sm">
+                            Check other{" "}
+                            <Link
+                                href={`/events/${city}`}
+                                className="text-primary hover:underline"
+                            >
+                                events in {cityName}
+                            </Link>
+                        </p>
+                    )}
+                </section>
+            </FadeIn>
         </article>
     );
 }
